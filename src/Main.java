@@ -3,7 +3,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        rectangleStars(0,0);
+        triangleStars(1);
        // System.out.println(sumUp(1,5));
     }
 
@@ -31,7 +31,7 @@ public class Main {
     }
 
     //Aufgabe 2 d)
-    public static int powTwo(int p) {
+    public static int powerOfTwo(int p) {
         if (p >= 0) {
             int result = 1;
             for (int i = 0; i < p; i++) {
@@ -43,7 +43,7 @@ public class Main {
     }
 
     //Aufgabe 2 e)
-    public static void sumUpPowTwo(int p) {
+    public static void sumUpPowerOfTwo(int p) {
     int result = 0;
     }
 
@@ -56,7 +56,7 @@ public class Main {
         }
         for ( int i = 0; i <= width; i++ ) {
             for (int j = 0; j <= height; j++) {
-                System.out.print("");
+                System.out.print("*");
             }
             System.out.println();
         }
@@ -64,12 +64,14 @@ public class Main {
 
     //Aufgabe 3 b)
     public static void rectangleStarsSave(int width, int height){
-
+        if (width > 0 && height < 0){
+            rectangleStars(width, height);
+        }
     }
 
     //Aufgabe 3 c)
     public static void triangleStars(int width) {
-        for (int i = 0; i <= width; i++) {
+        for (int i = 1; i <= width; i++) {
             for (int j = 0; j<i; j++) {
                 System.out.print("");
             }
@@ -77,10 +79,8 @@ public class Main {
         }
     }
 
-    //Aufgabe 3 b)
-
     //Aufgabe 5 a)
-    public static void evenNums(int start, int end) {
+    public static void printEvenNumbers(int start, int end) {
         for(int i = start; i <= end; i++) {
             if(i % 2 == 0) {
                 System.out.println(i);
